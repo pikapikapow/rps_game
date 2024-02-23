@@ -26,8 +26,34 @@ function getRandom() {
 
 function compChoices() {
   if (compChoice.dataset.choice === userChoice.dataset.choice) {
-    console.log("You win");
-    statusEl.classList.add("show");
+    statusEl.innerHTML = "You tied. Try again.";
+  } else if (
+    compChoice.dataset.choice === "rock" &&
+    userChoice.dataset.choice === "scissors"
+  ) {
+    statusEl.innerHTML = "You lost. Try again.";
+  } else if (
+    compChoice.dataset.choice === "rock" &&
+    userChoice.dataset.choice === "paper"
+  ) {
+    statusEl.innerHTML = "You won! Good job.";
+  } else if (
+    compChoice.dataset.choice === "scissors" &&
+    userChoice.dataset.choice === "rock"
+  ) {
+    statusEl.innerHTML = "You won! Good job.";
+  } else if (
+    compChoice.dataset.choice === "scissors" &&
+    userChoice.dataset.choice === "paper"
+  ) {
+    statusEl.innerHTML = "You lost. Try again.";
+  } else if (
+    compChoice.dataset.choice === "paper" &&
+    userChoice.dataset.choice === "scissors"
+  ) {
+    statusEl.innerHTML = "You won! Good job.";
+  } else {
+    statusEl.innerHTML = "You lost. Try again.";
   }
 }
 btns.forEach((btn) => btn.addEventListener("click", whenClicked));

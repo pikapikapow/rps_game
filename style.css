@@ -28,7 +28,6 @@ button:hover {
 .status {
     font-weight: bold;
     font-size: 30px;
-    display: none;
 }
 
 .results p {
@@ -45,6 +44,3 @@ button:hover {
     font-weight: bold;
 }
 
-.show {
-    display: block;
-}
