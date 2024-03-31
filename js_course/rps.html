@@ -31,12 +31,19 @@
       Scissors
     </button>
 
+    <p class="result"></p>
+
+    <p class="picks"></p>
+
+    <p class="js-score"></p>
+
     <button
       onclick="
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
+      updateScoreElement()
     "
     >
       Reset Score
@@ -49,15 +56,21 @@
         ties: 0,
       };
 
+      updateScoreElement();
+
+      document.querySelector(
+        ".picks"
+      ).innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}.`;
+
       /*
-      if (!score) {
-        score = {
-          wins: 0,
-          losses: 0,
-          ties: 0
-        };
-      }
-      */
+            if (!score) {
+              score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+              };
+            }
+            */
 
       function rps(playerMove) {
         const computerMove = ComputerMove();
@@ -100,8 +113,22 @@
 
         localStorage.setItem("score", JSON.stringify(score));
 
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        updateScoreElement();
+
+        document.querySelector(".result").innerHTML = result;
+
+        document.querySelector(
+          ".picks"
+        ).innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}.`;
+
+        //   alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+        // Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+      }
+
+      function updateScoreElement() {
+        document.querySelector(
+          ".js-score"
+        ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
       }
 
       function ComputerMove() {

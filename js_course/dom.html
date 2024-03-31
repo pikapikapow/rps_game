@@ -36,6 +36,17 @@
     </button>
     <p class="js-total-cost"></p>
 
+    <!-- Challenge exercise 9h -->
+
+    <input
+      type="text"
+      placeholder="type here..."
+      onkeyup="displayText(event)"
+      class="myInput"
+    />
+
+    <p class="your-text"></p>
+
     <script>
       console.log(document.querySelector("button").innerHTML);
       document.querySelector("button").innerHTML = "Changed";
@@ -63,6 +74,7 @@
 
         if (cost < 40) {
           cost = cost + 10;
+          cost = (Math.round(cost * 100) / 100).toFixed(2);
         }
 
         document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
@@ -76,6 +88,17 @@
         } else {
           buttonElement.innerHTML = "Subscribe";
         }
+      }
+
+      // challenge exercise 9h function
+
+      function displayText(event) {
+        // let myText = "";
+        // console.log(event.key);
+        // myText += event.key;
+
+        document.querySelector(".your-text").innerHTML =
+          document.querySelector(".myInput").value;
       }
     </script>
   </body>
