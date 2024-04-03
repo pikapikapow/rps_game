@@ -3,41 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rps.css" />
     <title>Document</title>
   </head>
   <body>
-    <p>Rock Paper Scissors</p>
+    <p class="head">Rock Paper Scissors</p>
     <button
+      class="your-choice"
       onclick="
       rps('rock');
     "
     >
-      Rock
+      ✊
     </button>
 
     <button
+      class="your-choice"
       onclick="
       rps('paper');
     "
     >
-      Paper
+      ✋
     </button>
 
     <button
+      class="your-choice"
       onclick="
       rps('scissors');
     "
     >
-      Scissors
+      ✌️
     </button>
 
-    <p class="result"></p>
+    <br />
 
-    <p class="picks"></p>
+    <div class="end">
+      <p class="result-head">Results:</p>
+
+      <p class="result">Haven't played yet.</p>
+
+      <p class="picks"></p>
+    </div>
 
     <p class="js-score"></p>
 
     <button
+      class="reset-btn"
       onclick="
       score.wins = 0;
       score.losses = 0;

@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document Object Model</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button>hello</button>
-    <button class="js-button">Second button</button>
+    <button class="css-btn">hello</button>
+    <button class="js-button css-btn">Second button</button>
 
     <p>YouTube Subscribe Button</p>
     <button
@@ -20,6 +21,10 @@
     </button>
 
     <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10</p>
+    <p>Orders over $40 = FREE shipping</p>
+
     <input
       placeholder="Cost of order"
       class="js-cost-input"
@@ -28,6 +33,7 @@
     "
     />
     <button
+      class="btn"
       onclick="
       calculateTotal();
     "
@@ -37,6 +43,7 @@
     <p class="js-total-cost"></p>
 
     <!-- Challenge exercise 9h -->
+    <hr />
 
     <input
       type="text"
@@ -45,7 +52,7 @@
       class="myInput"
     />
 
-    <p class="your-text"></p>
+    <p class="your-text">Your text will show here...</p>
 
     <script>
       console.log(document.querySelector("button").innerHTML);
@@ -85,8 +92,10 @@
 
         if (buttonElement.innerText === "Subscribe") {
           buttonElement.innerHTML = "Subscribed";
+          buttonElement.classList.add("clicked");
         } else {
           buttonElement.innerHTML = "Subscribe";
+          buttonElement.classList.remove("clicked");
         }
       }
 
