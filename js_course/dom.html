@@ -40,6 +40,7 @@
     >
       Calculate
     </button>
+    <p class="error">Error: cost cannot be less than $0</p>
     <p class="js-total-cost"></p>
 
     <!-- Challenge exercise 9h -->
@@ -55,6 +56,7 @@
     <p class="your-text">Your text will show here...</p>
 
     <script>
+      const error = document.querySelector(".error");
       console.log(document.querySelector("button").innerHTML);
       document.querySelector("button").innerHTML = "Changed";
 
@@ -79,7 +81,15 @@
         const inputElement = document.querySelector(".js-cost-input");
         let cost = Number(inputElement.value);
 
+        if (cost < 0) {
+          document.querySelector(".js-total-cost").innerHTML = "";
+
+          error.classList.add("open");
+          return;
+        }
+
         if (cost < 40) {
+          error.classList.remove("open");
           cost = cost + 10;
           cost = (Math.round(cost * 100) / 100).toFixed(2);
         }
