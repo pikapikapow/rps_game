@@ -5,11 +5,26 @@ const todoList = [];
 function addTodo() {
   const inputEl = document.querySelector(".js-input");
   const name = inputEl.value;
-  todoList.push(name);
+  todoList.unshift(name);
   console.log(todoList);
+  todoListEl.innerHTML = "";
+  for (let i = 0; i < todoList.length; i++) {
+    let listEl = document.createElement("li");
+    listEl.textContent = todoList[i];
+    todoListEl.appendChild(listEl);
+  }
 
+  //   let listEl = document.createElement("li");
+  //   listEl.textContent = name;
+  //   todoListEl.appendChild(listEl);
   inputEl.value = "";
 }
+
+// for (let i = 0; i < todoList.length; i++) {
+//   let listEl = document.createElement("li");
+//   listEl.textContent = todoList[i];
+//   todoListEl.appendChild(listEl);
+// }
 
 // let i = 1;
 
