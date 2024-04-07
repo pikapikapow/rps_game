@@ -1,0 +1,30 @@
+.calc {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.js-calculation {
+    font-size: 30px;
+}
+
+.calc-btn {
+    border: none;
+    color: white;
+   background-color: rgba(113, 113, 113, 0.452);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+}
+
+.op-btn {
+    background-color: orange;
+}
+
+.clear {
+    font-size: 15px;
+}
