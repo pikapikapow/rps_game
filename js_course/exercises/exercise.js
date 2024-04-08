@@ -23,3 +23,46 @@ techtoggler.addEventListener("click", function () {
   gamingtoggler.classList.remove("toggled");
   musictoggler.classList.remove("toggled");
 });
+
+const nums = [10, 20, 30];
+nums[2] = 99;
+function getLastValue(Array) {
+  console.log(Array[Array.length - 1]);
+}
+
+getLastValue([20, 30, 42]);
+
+function arraySwap(array) {
+  const lastIndex = array.length - 1;
+
+  const lastValue = array[lastIndex];
+  const firstValue = array[0];
+
+  array[0] = lastValue;
+  array[lastIndex] = firstValue;
+
+  return array;
+}
+console.log(arraySwap([22, 32, 47, 21, 90, 37]));
+
+for (let i = 0; i <= 5; i++) {
+  console.log(i * 2);
+}
+
+for (let i = 5; i >= 0; i -= 1) {
+  console.log(i);
+}
+
+// let i = 0;
+
+// while (i <= 5) {
+//   console.log(i * 2);
+//   i++;
+// }
+
+// let j = 5;
+
+// while (j >= 0) {
+//   console.log(i);
+//   j -= 1;
+// }
