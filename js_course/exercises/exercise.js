@@ -66,3 +66,25 @@ for (let i = 5; i >= 0; i -= 1) {
 //   console.log(i);
 //   j -= 1;
 // }
+
+const array = [1, 2, 3];
+const result = [];
+
+for (let i = 0; i < array.length; i++) {
+  result.push(array[i] + 1);
+}
+
+console.log(result);
+
+function addOne(array) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    result.push(array[i] + 1);
+  }
+
+  return result;
+}
+
+console.log(addOne([1, 2, 3]));
+console.log(addOne([-2, -1, 0, 99]));
