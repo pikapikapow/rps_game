@@ -88,3 +88,40 @@ function addOne(array) {
 
 console.log(addOne([1, 2, 3]));
 console.log(addOne([-2, -1, 0, 99]));
+
+function addNum(array, num) {
+  const newResult = [];
+
+  for (let i = 0; i < array.length; i++) {
+    newResult.push(array[i] + num);
+  }
+
+  return newResult;
+}
+
+console.log(addNum([22, 31, 42, 10], 2));
+
+function addArrays(array, array2) {
+  const newestResult = [];
+
+  for (let i = 0; i < array.length; i++) {
+    newestResult.push(array[i] + array2[i]);
+  }
+
+  return newestResult;
+}
+
+console.log(addArrays([5, 3, 2], [2, 4, 5]));
+
+function countPositive(nums) {
+  let positives = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] >= 1) {
+      positives++;
+    }
+  }
+  return positives;
+}
+
+console.log(countPositive([22, 31, -5, -72]));
