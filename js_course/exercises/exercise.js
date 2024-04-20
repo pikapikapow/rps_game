@@ -198,3 +198,37 @@ function countWords(words) {
 }
 
 console.log(countWords(["apple", "grape", "apple", "apple"]));
+
+// let words = ["ello", "yum", "search", "woah"];
+
+// 11o and 11p exercises
+
+function searchArray(array) {
+  let index = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "search") {
+      index = i;
+      break;
+    }
+  }
+  console.log(index);
+}
+
+searchArray(["search", "no", "search"]);
+
+searchArray(["there", "isnosearchhere"]);
+
+// 11q exercise
+
+function searchIndex(array, word) {
+  let index = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      index = i;
+      break;
+    }
+  }
+  console.log(index);
+}
+
+searchIndex(["hehe", "huh", "hehe"], "hehe");
