@@ -232,3 +232,25 @@ function searchIndex(array, word) {
 }
 
 searchIndex(["hehe", "huh", "hehe"], "hehe");
+
+// 11r+11s exercises
+
+function removeEgg(foods) {
+  let reverseFoods = foods.reverse();
+  let newFoods = [];
+  let eggCount = 0;
+  for (let i = 0; i < reverseFoods.length; i++) {
+    if (reverseFoods[i].toLowerCase() === "egg" && eggCount < 2) {
+      eggCount++;
+
+      continue;
+    } else {
+      newFoods.push(reverseFoods[i]);
+    }
+  }
+  console.log(newFoods.reverse());
+}
+
+let foodArray = ["egg", "apple", "Egg", "eGg", "ham"];
+
+removeEgg(foodArray);
