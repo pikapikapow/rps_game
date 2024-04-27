@@ -1,256 +1,290 @@
-const gamingtoggler = document.querySelector(".gaming");
-const musictoggler = document.querySelector(".music");
-const techtoggler = document.querySelector(".tech");
+// const gamingtoggler = document.querySelector(".gaming");
+// const musictoggler = document.querySelector(".music");
+// const techtoggler = document.querySelector(".tech");
 
-console.log(
-  document.querySelector(".js-button").classList.contains("js-button")
-);
+// console.log(
+//   document.querySelector(".js-button").classList.contains("js-button")
+// );
 
-gamingtoggler.addEventListener("click", function () {
-  gamingtoggler.classList.toggle("toggled");
-  musictoggler.classList.remove("toggled");
-  techtoggler.classList.remove("toggled");
-});
+// gamingtoggler.addEventListener("click", function () {
+//   gamingtoggler.classList.toggle("toggled");
+//   musictoggler.classList.remove("toggled");
+//   techtoggler.classList.remove("toggled");
+// });
 
-musictoggler.addEventListener("click", function () {
-  musictoggler.classList.toggle("toggled");
-  techtoggler.classList.remove("toggled");
-  gamingtoggler.classList.remove("toggled");
-});
+// musictoggler.addEventListener("click", function () {
+//   musictoggler.classList.toggle("toggled");
+//   techtoggler.classList.remove("toggled");
+//   gamingtoggler.classList.remove("toggled");
+// });
 
-techtoggler.addEventListener("click", function () {
-  techtoggler.classList.toggle("toggled");
-  gamingtoggler.classList.remove("toggled");
-  musictoggler.classList.remove("toggled");
-});
+// techtoggler.addEventListener("click", function () {
+//   techtoggler.classList.toggle("toggled");
+//   gamingtoggler.classList.remove("toggled");
+//   musictoggler.classList.remove("toggled");
+// });
 
-const nums = [10, 20, 30];
-nums[2] = 99;
-function getLastValue(Array) {
-  console.log(Array[Array.length - 1]);
-}
+// const nums = [10, 20, 30];
+// nums[2] = 99;
+// function getLastValue(Array) {
+//   console.log(Array[Array.length - 1]);
+// }
 
-getLastValue([20, 30, 42]);
+// getLastValue([20, 30, 42]);
 
-function arraySwap(array) {
-  const lastIndex = array.length - 1;
+// function arraySwap(array) {
+//   const lastIndex = array.length - 1;
 
-  const lastValue = array[lastIndex];
-  const firstValue = array[0];
+//   const lastValue = array[lastIndex];
+//   const firstValue = array[0];
 
-  array[0] = lastValue;
-  array[lastIndex] = firstValue;
+//   array[0] = lastValue;
+//   array[lastIndex] = firstValue;
 
-  return array;
-}
-console.log(arraySwap([22, 32, 47, 21, 90, 37]));
+//   return array;
+// }
+// console.log(arraySwap([22, 32, 47, 21, 90, 37]));
 
-for (let i = 0; i <= 5; i++) {
-  console.log(i * 2);
-}
-
-for (let i = 5; i >= 0; i -= 1) {
-  console.log(i);
-}
-
-// let i = 0;
-
-// while (i <= 5) {
+// for (let i = 0; i <= 5; i++) {
 //   console.log(i * 2);
-//   i++;
 // }
 
-// let j = 5;
-
-// while (j >= 0) {
+// for (let i = 5; i >= 0; i -= 1) {
 //   console.log(i);
-//   j -= 1;
 // }
 
-const array = [1, 2, 3];
-const result = [];
+// // let i = 0;
 
-for (let i = 0; i < array.length; i++) {
-  result.push(array[i] + 1);
-}
+// // while (i <= 5) {
+// //   console.log(i * 2);
+// //   i++;
+// // }
 
-console.log(result);
+// // let j = 5;
 
-function addOne(array) {
-  const result = [];
+// // while (j >= 0) {
+// //   console.log(i);
+// //   j -= 1;
+// // }
 
-  for (let i = 0; i < array.length; i++) {
-    result.push(array[i] + 1);
-  }
+// const array = [1, 2, 3];
+// const result = [];
 
-  return result;
-}
+// for (let i = 0; i < array.length; i++) {
+//   result.push(array[i] + 1);
+// }
 
-console.log(addOne([1, 2, 3]));
-console.log(addOne([-2, -1, 0, 99]));
+// console.log(result);
 
-function addNum(array, num) {
-  const newResult = [];
+// function addOne(array) {
+//   const result = [];
 
-  for (let i = 0; i < array.length; i++) {
-    newResult.push(array[i] + num);
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     result.push(array[i] + 1);
+//   }
 
-  return newResult;
-}
+//   return result;
+// }
 
-console.log(addNum([22, 31, 42, 10], 2));
+// console.log(addOne([1, 2, 3]));
+// console.log(addOne([-2, -1, 0, 99]));
 
-function addArrays(array, array2) {
-  const newestResult = [];
+// function addNum(array, num) {
+//   const newResult = [];
 
-  for (let i = 0; i < array.length; i++) {
-    newestResult.push(array[i] + array2[i]);
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     newResult.push(array[i] + num);
+//   }
 
-  return newestResult;
-}
+//   return newResult;
+// }
 
-console.log(addArrays([5, 3, 2], [2, 4, 5]));
+// console.log(addNum([22, 31, 42, 10], 2));
 
-function countPositive(nums) {
-  let positives = 0;
+// function addArrays(array, array2) {
+//   const newestResult = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] >= 1) {
-      positives++;
-    }
-  }
-  return positives;
-}
+//   for (let i = 0; i < array.length; i++) {
+//     newestResult.push(array[i] + array2[i]);
+//   }
 
-console.log(countPositive([22, 31, -5, -72]));
+//   return newestResult;
+// }
 
-function minMax(nums) {
-  const result = {
-    min: nums[0],
-    max: nums[0],
-  };
+// console.log(addArrays([5, 3, 2], [2, 4, 5]));
 
-  for (let i = 0; i < nums.length; i++) {
-    const value = nums[i];
+// function countPositive(nums) {
+//   let positives = 0;
 
-    if (value < result.min) {
-      result.min = value;
-    }
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] >= 1) {
+//       positives++;
+//     }
+//   }
+//   return positives;
+// }
 
-    if (value > result.max) {
-      result.max = value;
-    }
-  }
+// console.log(countPositive([22, 31, -5, -72]));
 
-  return result;
-}
+// function minMax(nums) {
+//   const result = {
+//     min: nums[0],
+//     max: nums[0],
+//   };
 
-console.log(minMax([1, -3, 5]));
-console.log(minMax([-2, 3, -5, 7, 10]));
+//   for (let i = 0; i < nums.length; i++) {
+//     const value = nums[i];
 
-function minMax(nums) {
-  const result = {
-    min: null,
-    max: null,
-  };
+//     if (value < result.min) {
+//       result.min = value;
+//     }
 
-  for (let i = 0; i < nums.length; i++) {
-    const value = nums[i];
+//     if (value > result.max) {
+//       result.max = value;
+//     }
+//   }
 
-    if (result.min === null || value < result.min) {
-      result.min = value;
-    }
+//   return result;
+// }
 
-    if (result.max === null || value > result.max) {
-      result.max = value;
-    }
-  }
+// console.log(minMax([1, -3, 5]));
+// console.log(minMax([-2, 3, -5, 7, 10]));
 
-  return result;
-}
+// function minMax(nums) {
+//   const result = {
+//     min: null,
+//     max: null,
+//   };
 
-console.log(minMax([1, -3, 5]));
-console.log(minMax([-2, 3, -5, 7, 10]));
+//   for (let i = 0; i < nums.length; i++) {
+//     const value = nums[i];
 
-console.log(minMax([]));
-console.log(minMax([3]));
+//     if (result.min === null || value < result.min) {
+//       result.min = value;
+//     }
 
-function countWords(words) {
-  const result = {};
+//     if (result.max === null || value > result.max) {
+//       result.max = value;
+//     }
+//   }
 
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
+//   return result;
+// }
 
-    // result[word] adds/accesses a property using whatever is
-    // saved inside the 'word' variable.
-    // If word = 'apple', result[word] will do result['apple']
-    // If word = 'grape', result[word] will do result['grape']
-    if (!result[word]) {
-      result[word] = 1;
-    } else {
-      result[word]++;
-    }
-  }
+// console.log(minMax([1, -3, 5]));
+// console.log(minMax([-2, 3, -5, 7, 10]));
 
-  return result;
-}
+// console.log(minMax([]));
+// console.log(minMax([3]));
 
-console.log(countWords(["apple", "grape", "apple", "apple"]));
+// function countWords(words) {
+//   const result = {};
 
-// let words = ["ello", "yum", "search", "woah"];
+//   for (let i = 0; i < words.length; i++) {
+//     const word = words[i];
 
-// 11o and 11p exercises
+//     // result[word] adds/accesses a property using whatever is
+//     // saved inside the 'word' variable.
+//     // If word = 'apple', result[word] will do result['apple']
+//     // If word = 'grape', result[word] will do result['grape']
+//     if (!result[word]) {
+//       result[word] = 1;
+//     } else {
+//       result[word]++;
+//     }
+//   }
 
-function searchArray(array) {
-  let index = -1;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === "search") {
-      index = i;
-      break;
-    }
-  }
-  console.log(index);
-}
+//   return result;
+// }
 
-searchArray(["search", "no", "search"]);
+// console.log(countWords(["apple", "grape", "apple", "apple"]));
 
-searchArray(["there", "isnosearchhere"]);
+// // let words = ["ello", "yum", "search", "woah"];
 
-// 11q exercise
+// // 11o and 11p exercises
+
+// function searchArray(array) {
+//   let index = -1;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === "search") {
+//       index = i;
+//       break;
+//     }
+//   }
+//   console.log(index);
+// }
+
+// searchArray(["search", "no", "search"]);
+
+// searchArray(["there", "isnosearchhere"]);
+
+// // 11q exercise
 
 function searchIndex(array, word) {
-  let index = -1;
   for (let i = 0; i < array.length; i++) {
     if (array[i] === word) {
-      index = i;
-      break;
+      return i;
     }
   }
-  console.log(index);
+
+  return -1;
 }
 
 searchIndex(["hehe", "huh", "hehe"], "hehe");
 
-// 11r+11s exercises
+function unique(array) {
+  const result = [];
 
-function removeEgg(foods) {
-  let reverseFoods = foods.reverse();
-  let newFoods = [];
-  let eggCount = 0;
-  for (let i = 0; i < reverseFoods.length; i++) {
-    if (reverseFoods[i].toLowerCase() === "egg" && eggCount < 2) {
-      eggCount++;
+  for (let i = 0; i < array.length; i++) {
+    const word = array[i];
 
-      continue;
-    } else {
-      newFoods.push(reverseFoods[i]);
+    if (searchIndex(result, word) === -1) {
+      result.push(word);
     }
   }
-  console.log(newFoods.reverse());
+
+  // return result;
+  console.log(result);
 }
 
-let foodArray = ["egg", "apple", "Egg", "eGg", "ham"];
+unique(["yellow", "yellow", "yellow"]);
 
-removeEgg(foodArray);
+// // 11r+11s exercises
+
+// function removeEgg(foods) {
+//   let reverseFoods = foods.reverse();
+//   let newFoods = [];
+//   let eggCount = 0;
+//   for (let i = 0; i < reverseFoods.length; i++) {
+//     if (reverseFoods[i].toLowerCase() === "egg" && eggCount < 2) {
+//       eggCount++;
+
+//       continue;
+//     } else {
+//       newFoods.push(reverseFoods[i]);
+//     }
+//   }
+//   console.log(newFoods.reverse());
+// }
+
+// let foodArray = ["egg", "apple", "Egg", "eGg", "ham"];
+
+// removeEgg(foodArray);
+
+// // Challenge 11v
+
+// function fizzBuzz() {
+//   for (let i = 1; i <= 20; i++) {
+//     if (i % 3 == 0 && i % 5 == 0) {
+//       console.log("FizzBuzz");
+//     } else if (i % 5 == 0) {
+//       console.log("Buzz");
+//     } else if (i % 3 == 0) {
+//       console.log("Fizz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// fizzBuzz();

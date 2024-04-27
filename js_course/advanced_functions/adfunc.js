@@ -1,0 +1,40 @@
+const buttonElement = document.querySelector(".js-button");
+
+const eventListener = () => {
+  console.log("click");
+};
+buttonElement.addEventListener("click", eventListener);
+
+buttonElement.removeEventListener("click", eventListener);
+
+buttonElement.addEventListener("click", () => {
+  console.log("click2");
+});
+
+greeting();
+function greeting() {
+  console.log("hello");
+}
+greeting();
+
+const num = 2;
+const function1 = function () {
+  console.log("hello2");
+};
+
+console.log(function1);
+console.log(typeof function1);
+function1();
+
+const object1 = {
+  num: 2,
+  fun: function () {
+    console.log("hello3");
+  },
+};
+object1.fun();
+
+function display(param) {
+  console.log(param);
+}
+display(2);
