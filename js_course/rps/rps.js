@@ -20,6 +20,21 @@ document.querySelector(
         }
         */
 
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay() {
+  if (!isAutoPlaying) {
+    intervalId = setInterval(function () {
+      const playerMove = ComputerMove();
+      rps(playerMove);
+    }, 1250);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(intervalId);
+  }
+}
+
 function rps(playerMove) {
   const computerMove = ComputerMove();
 
