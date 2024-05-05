@@ -59,3 +59,43 @@ setInterval(function () {
 }, 3000);
 
 console.log("next linee");
+
+const arrowFunction = (param, param2) => {
+  console.log("hello");
+  return 5;
+};
+arrowFunction();
+
+const oneParam = (param) => {
+  console.log(param + 1);
+};
+oneParam(2);
+
+const oneLine = () => 2 + 3;
+console.log(oneLine());
+
+const object2 = {
+  method: () => {},
+  method() {},
+};
+
+console.log(
+  [1, -3, 5].filter((value, index) => {
+    /*
+  if (value >= 0) {
+    return true;
+  } else {
+    return false;
+  }
+  */
+    return value >= 0;
+  })
+);
+
+console.log(
+  [1, 1, 3].map((value, index) => {
+    return value * 2;
+  })
+);
+
+console.log([1, 1, 3].map((value) => value * 2));
