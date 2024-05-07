@@ -308,8 +308,7 @@ runTwice(function () {
 function updateButton() {
   const button = document.querySelector(".js-button");
 
-  button.innerHTML = "Loading...";
-  setTimeout(function () {
+  setTimeout(() => {
     button.innerHTML = "Finished!";
   }, 1000);
 }
@@ -340,3 +339,49 @@ setInterval(function () {
     document.title = "App";
   }
 }, 10);
+
+const multiply = (a, b) => a * b;
+
+console.log(multiply(42, 2));
+
+function countPositive(nums) {
+  let positiveNumbers = 0;
+
+  nums.forEach((num) => {
+    if (num > 0) {
+      positiveNumbers++;
+    }
+  });
+
+  return positiveNumbers;
+}
+
+console.log(countPositive([11, -55, 22]));
+
+function addNum(array, num) {
+  return array.map((value) => value + num);
+}
+
+console.log(addNum([1, 9, 6], 2));
+console.log(addNum([-2, -1, 0, 99], 2));
+
+function removeEgg(foods) {
+  return foods.filter((food) => food !== "egg");
+}
+
+console.log(removeEgg(["egg", "ice cream", "egg", "waffles", "steak"]));
+
+function removeEgg(foods) {
+  let eggsRemoved = 0;
+
+  return foods.filter((food) => {
+    if (food === "egg" && eggsRemoved < 2) {
+      eggsRemoved++;
+      return false;
+    }
+
+    return true;
+  });
+}
+
+console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
